@@ -38,7 +38,7 @@ def calculate():
     num1, num2 = get_numbers()
     operation_type = get_operation()
 
-    #     # if operation_type == Enum.ADD:
+    # if operation_type == Enum.ADD:
 #     #     result = num1 + num2
 #     # elif operation_type == Enum.SUB:
 #     #     result = num1 - num2
@@ -56,10 +56,10 @@ def calculate():
 
 
     operations = {
-        enOperation.ADD: lambda x, y: x + y,
-        enOperation.SUB: lambda x, y: x - y,
-        enOperation.MUL: lambda x, y: x * y,
-        enOperation.DIV: lambda x, y: x / y
+        enOperation.ADD: lambda num1, num2: num1 + num2,
+        enOperation.SUB: lambda num1, num2: num1 - num2,
+        enOperation.MUL: lambda num1, num2: num1 * num2,
+        enOperation.DIV: lambda num1, num2: num1 / num2
     }
 
     if operation_type == enOperation.DIV.value and num2 == 0:
